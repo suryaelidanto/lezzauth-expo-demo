@@ -6922,7 +6922,7 @@ levn@^0.4.1:
 
 "lezzauth@git+https://github.com/lezzauth/lezzauth.git":
   version "0.0.1"
-  resolved "git+https://github.com/lezzauth/lezzauth.git#bf1b1732a38c6c9885a2639375c25a2e3f1a4486"
+  resolved "git+https://github.com/lezzauth/lezzauth.git#348b8344e84f05de058d5870f62a8c4ca15b639b"
   dependencies:
     "@expo/vector-icons" "^13.0.0"
     "@react-native-google-signin/google-signin" "^10.1.0"

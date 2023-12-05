@@ -1,9 +1,8 @@
-import { View, Button, Text, StatusBar } from 'react-native'
-import { useUser, useLezzAuth } from 'lezzauth/expo'
-import { SignOutButton } from '../lezzauth/_generated/components'
+import { useUser } from 'lezzauth/expo'
+import { StatusBar, Text, View } from 'react-native'
+import { SignOutButton } from '../lezzauth/_generated/components/sign-in'
 
 export function HomePage({ navigation }) {
-    // const { signOut } = useLezzAuth()
     const { user } = useUser()
 
     return (
@@ -15,7 +14,6 @@ export function HomePage({ navigation }) {
             <Text>ID : {user.id}</Text>
             <Text>Email : {user.email}</Text>
             <SignOutButton>Keluar</SignOutButton>
-            {/* <Button onPress={() => signOut()} title='Sign out' /> */}
         </View>
     )
 }
