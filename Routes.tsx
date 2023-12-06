@@ -3,6 +3,7 @@ import { AuthenticatedRoutes, PublicRoutes } from "lezzauth/expo";
 import * as React from "react";
 import { HomePage } from './pages/HomePage';
 import { SignInPage } from './pages/SignInPage';
+import { SignUpPage } from './pages/SignUpPage';
 
 export function Routes() {
     const Stack = createStackNavigator()
@@ -21,6 +22,7 @@ export function Routes() {
                     headerShown: false
                 }}>
                     <Stack.Screen name="SignIn" component={SignInPage} />
+                    <Stack.Screen name="SignUp" component={SignUpPage} />
                 </Stack.Navigator>
             </PublicRoutes>
         </>
