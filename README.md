@@ -55,6 +55,9 @@ Setting your `package` name, `intentFilters` (for google signin), and the `schem
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
     },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
     "intentFilters": [
       {
         "autoVerify": true,
@@ -70,9 +73,6 @@ Setting your `package` name, `intentFilters` (for google signin), and the `schem
       }
     ],
     "package": "com.suryaelidanto.lezzauthexpodemo"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     },
     "scheme": "lezzauthexpodemo"
   }
