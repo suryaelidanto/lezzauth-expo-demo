@@ -24,13 +24,12 @@ npx expo start -c
 
 Note : `-c` just to make sure no weird cache there
 
-OR, you can run it with build version too
 
-```bash
-npx expo run:android
-```
+## Problem : Google button not working
 
-Setting your package name (for redirect purposes) : 
+You must set up your `app.json` first 
+
+Setting your `package` name, `intentFilters` (for google signin), and the `scheme` (just make it same as your app name), in here im naming it as `"package": "com.suryaelidanto.lezzauthexpodemo"`, `"scheme": "lezzauthexpodemo"` : 
 ```json
 {
   "expo": {
@@ -55,14 +54,33 @@ Setting your package name (for redirect purposes) :
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-    for example ->  "package": "com.suryaelidanto.lezzauthexpodemo"
+    },
+    "intentFilters": [
+      {
+        "autoVerify": true,
+        "action": "VIEW",
+        "data": {
+          "scheme": "lezzauthexpodemo",
+          "host": "com.suryaelidanto.lezzauthexpodemo"
+        },
+        "category": [
+          "BROWSABLE",
+          "DEFAULT"
+        ]
+      }
+    ],
+    "package": "com.suryaelidanto.lezzauthexpodemo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "scheme": "myapp"
+    "scheme": "lezzauthexpodemo"
   }
 }
 ```
 
+And, lastly you should run it with build version :  
+
+```bash
+npx expo run:android
+```

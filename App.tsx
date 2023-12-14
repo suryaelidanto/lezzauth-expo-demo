@@ -1,4 +1,5 @@
 import { LezzAuthProvider } from 'lezzauth/expo';
+import React from 'react';
 import { Routes } from './Routes';
 
 export default function App() {
@@ -7,4 +8,4 @@ export default function App() {
       <Routes />
     </LezzAuthProvider>
   );
-}
+};

@@ -24,9 +24,23 @@
       },
       "package": "com.suryaelidanto.lezzauthexpodemo"
     },
+    "intentFilters": [
+      {
+        "autoVerify": true,
+        "action": "VIEW",
+        "data": {
+          "scheme": "lezzauthexpodemo",
+          "host": "com.suryaelidanto.lezzauthexpodemo"
+        },
+        "category": [
+          "BROWSABLE",
+          "DEFAULT"
+        ]
+      }
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "scheme": "myapp"
+    "scheme": "lezzauthexpodemo"
   }
 }
