@@ -50,13 +50,15 @@ Setting your `package` name, `intentFilters` (for google signin), and the `schem
     "ios": {
       "supportsTablet": true
     },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      },
+      "package": "com.suryaelidanto.lezzauthexpodemo"
     },
     "intentFilters": [
       {
@@ -72,8 +74,6 @@ Setting your `package` name, `intentFilters` (for google signin), and the `schem
         ]
       }
     ],
-    "package": "com.suryaelidanto.lezzauthexpodemo"
-    },
     "scheme": "lezzauthexpodemo"
   }
 }
