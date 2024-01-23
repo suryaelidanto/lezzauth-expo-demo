@@ -27,7 +27,7 @@ Reference [here](https://reactnavigation.org/docs/stack-navigator/)
 
 ## Usage
 
-1. Sign up or log in to our platform [here](https://app-stg.lezzauth.com/sign-up).
+1. Sign up or log in to our platform [here](https://lezzauth-mono.vercel.app/sign-up).
 
 2. Create an application on the dashboard and copy the API KEY from the `Expo` section.
 
