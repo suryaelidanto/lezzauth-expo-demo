@@ -1,4 +1,4 @@
-# Installation
+## Installation
 
 1. Ensure you have Expo CLI installed. If not, install it by running:
 
