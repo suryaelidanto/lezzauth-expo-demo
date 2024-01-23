@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expo-demo",
-    "slug": "expo-demo",
+    "name": "lezzauthexpodemo",
+    "slug": "lezzauthexpodemo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,14 +17,30 @@
     "ios": {
       "supportsTablet": true
     },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.lezzauth.lezzauthexpodemo"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "intentFilters": [
+      {
+        "autoVerify": true,
+        "action": "VIEW",
+        "data": {
+          "scheme": "lezzauthexpodemo",
+          "host": "com.lezzauth.lezzauthexpodemo"
+        },
+        "category": [
+          "BROWSABLE",
+          "DEFAULT"
+        ]
+      }
+    ],
+    "scheme": "lezzauthexpodemo"
   }
 }

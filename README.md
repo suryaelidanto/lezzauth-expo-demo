@@ -17,6 +17,14 @@ npm install lezzauth
 npx expo install @react-native-community/masked-view react-native-gesture-handler react-native-reanimated react-native-safe-area-context react-native-screens
 ```
 
+4. Install your react navigation type, for Example:
+
+```bash
+npm install @react-navigation/stack
+```
+
+Reference [here](https://reactnavigation.org/docs/stack-navigator/)
+
 ## Usage
 
 1. Sign up or log in to our platform [here](https://app-stg.lezzauth.com/sign-up).
@@ -38,11 +46,11 @@ Note: If you use OAuth to log in (e.g., Google OAuth), set your password in the 
 npx lezzauth dev
 ```
 
-6. Set up the `lezzauth` provider in your main app file (e.g., `App.js` or `App.tsx`):
+6. Set up the `lezzauth` provider in your main app file (e.g., `App.tsx` or `App.js`):
 
 ```tsx
+// ./App.tsx OR ./App.js
 import { LezzAuthProvider } from 'lezzauth/expo';
-import React from 'react';
 import { Routes } from './Routes';
 
 export default function App() {
@@ -57,11 +65,11 @@ export default function App() {
 7. Configure your routes:
 
 ```tsx
-// ./Routes.js OR ./Routes.tsx
+// ./Routes.tsx OR ./Routes.js
 import { createStackNavigator } from '@react-navigation/stack';
 import { AuthenticatedRoutes, PublicRoutes } from "lezzauth/expo";
 import * as React from "react";
-import HomePage  from './screens/HomePage';
+import HomePage from './screens/HomePage';
 import SignInPage from './screens/SignInPage';
 import SignUpPage from './screens/SignUpPage';
 
@@ -77,8 +85,8 @@ export function Routes() {
             </AuthenticatedRoutes>
             <PublicRoutes>
                 <Stack.Navigator screenOptions={{ headerShown: false }}>
-                    <Stack.Screen name="SignIn" component={PartialSignInPage} />
-                    <Stack.Screen name="SignUp" component={PartialSignUpPage} />
+                    <Stack.Screen name="SignIn" component={SignInPage} />
+                    <Stack.Screen name="SignUp" component={SignUpPage} />
                 </Stack.Navigator>
             </PublicRoutes>
         </>
@@ -89,31 +97,31 @@ export function Routes() {
 8. Set up your screens as needed.
    
 ```tsx
-// ./screens/SignInPage.js OR ./screens/SignInPage.tsx
+// ./screens/SignInPage.tsx OR ./screens/SignInPage.js
 import { SignIn } from "../lezzauth/_generated/components/sign-in"
 
-export function SignInPage() {
+export default function SignInPage() {
     return <SignIn />
 }
 ```
 
 ```tsx
-// ./screens/SignUpPage.js OR ./screens/SignUpPage.tsx
+// ./screens/SignUpPage.tsx OR ./screens/SignUpPage.js
 import { SignUp } from "../lezzauth/_generated/components/sign-up"
 
-export function SignUpPage() {
+export default function SignUpPage() {
     return <SignUp />
 }
 ```
 
 ```tsx
-// ./screens/HomePage.js OR ./screens/HomePage.tsx
+// ./screens/HomePage.tsx OR ./screens/HomePage.js
 import { useUser } from 'lezzauth/expo'
-import { Text, View } from 'react-native'
+import { StatusBar, Text, View } from 'react-native'
 import { SignOutButton } from '../lezzauth/_generated/components/sign-in'
 import { UserButton } from '../lezzauth/_generated/components/user-button'
 
-export function HomePage() {
+export default function HomePage() {
     const { user } = useUser()
 
     return (
